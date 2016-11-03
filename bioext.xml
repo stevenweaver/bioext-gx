@@ -1,0 +1,19 @@
+<tool id="bioext_bealign" version="0.18" name="BEAlign">
+    <description>align sequences to a reference using a codon alignment algorithm</description>
+    <requirements>
+        <requirement type="package" version="1.11.2">numpy</requirement>
+        <requirement type="package" version="1.68">biopython</requirement>
+        <requirement type="package" version="3.5">python</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <version_command>python bioext.py --version</version_command>
+    <command>bealign</command>
+    <inputs>
+        <param format="fasta" label="Select the reference genome" name="history_item" type="data" />
+    </inputs>
+    <outputs>
+        <data format="bam" name="output_alignments" />
+    </outputs>
+</tool>
